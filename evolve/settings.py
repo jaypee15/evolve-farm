@@ -11,6 +11,10 @@ load_dotenv(BASE_DIR / '.env')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('SECRET_KEY')
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
@@ -162,7 +166,7 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000",
                         "https://evolve-farm.netlify.app"
                         ]
 
-EMAIL_BACKEND = "django.evolve.mail.backends.console.EmailBackend" 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" 
 SITE_ID = 1 
 
 SPECTACULAR_SETTINGS = {
