@@ -41,7 +41,7 @@ INSTALLED_APPS = [
 
     # Custom apps
 
-    "mlm.apps.MlmConfig",
+    # "mlm.apps.MlmConfig",
     "accounts.apps.AccountsConfig",
     
 ]
