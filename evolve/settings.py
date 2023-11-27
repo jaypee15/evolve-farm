@@ -152,6 +152,7 @@ REST_FRAMEWORK = {
 "rest_framework.authentication.SessionAuthentication",
 "rest_framework.authentication.TokenAuthentication", 
 ],
+"DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 CORS_ORIGIN_WHITELIST = (
@@ -166,3 +167,10 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000",
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" 
 SITE_ID = 1 
+
+SPECTACULAR_SETTINGS = {
+"TITLE": "Evolve Farm API Project",
+"DESCRIPTION": "A solution that predicts the best time to plant and harvest crops",
+"VERSION": "1.0.0",
+
+}
