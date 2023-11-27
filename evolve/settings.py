@@ -162,7 +162,7 @@ CSRF_TRUSTED_ORIGINS = ["http://localhost:3000",
                         "https://evolve-farm.netlify.app"
                         ]
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend" 
+EMAIL_BACKEND = "django.evolve.mail.backends.console.EmailBackend" 
 SITE_ID = 1 
 
 SPECTACULAR_SETTINGS = {
