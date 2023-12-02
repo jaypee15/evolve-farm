@@ -19,10 +19,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
-# ALLOWED_HOSTS = []
-# SECRET_KEY =  "SECRET"
-# DEBUG = True
+# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+ALLOWED_HOSTS = []
+SECRET_KEY =  "SECRET"
+DEBUG = True
 
 
 
@@ -159,6 +159,10 @@ REST_FRAMEWORK = {
 "rest_framework.authentication.TokenAuthentication", 
 ],
 "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+REST_AUTH = {
+   "REGISTER_SERIALIZER":"accounts.serializers.CustomRegisterSerializer"
 }
 
 CORS_ORIGIN_WHITELIST = (
